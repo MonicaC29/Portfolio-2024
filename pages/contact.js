@@ -46,7 +46,7 @@ export default () => (
         background-color: pink;
         padding: 10px;
         border: 1px solid #ccc;
-        border-radius: 4px;
+        border-radius: 8px;
       }
 
       /* Large text styles */
@@ -82,19 +82,28 @@ export default () => (
       input,
       textarea {
         width: 100%;
-        padding: 8px;
-        border: 1px solid #ccc;
+        padding: 2px solid #ccc;
         border-radius: 4px;
         box-sizing: border-box;
         margin-bottom: 10px;
-        background-color: pink;
+        background-color: white;
         align-items: center;
       }
 
       input[type="submit"] {
-        background-color: pink;
+        background-color: grey;
         color: black;
         cursor: pointer;
+      }
+
+      .form-container {
+        margin: 50px;
+    max-width: 600px;
+    padding: 30px;
+   border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: pink;
+  } 
       }
     `}</style>
     {/* Heading for the Contact Me page */}
@@ -123,40 +132,43 @@ export default () => (
       <br />
       {/* Heading for the contact form */}
       <h3 className="medium-text">Use the form below to send a message:</h3>
-      {/*--Contact form */}
-      <form id="messageForm">
-        <br />
-        {/* Input box for name */}
-        <div className="input-box">
-          <label for="name"> Name:</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Your name"
-            style={{ width: "200px" }}
-            required
-          />
-        </div>
-        <br />
-        {/* Input box for message */}
-        <div className="input-box">
-          <label htmlFor="message"> Your message:</label>
-          <textarea
-            name="message"
-            id="message"
-            placeholder="Enter message here..."
-            rows="8"
-            style={{ width: "400px" }}
-            required
-          ></textarea>
-        </div>
-        <br />
-        {/* Submit button */}
-        <div className="input-box">
-          <input name="submit" type="submit" value="submit" />
-        </div>
-      </form>
+      {/* Container for the form */}
+      <div className="form-container">
+        {/*--Contact form */}
+        <form id="messageForm">
+          <br />
+          {/* Input box for name */}
+          <div className="input-box">
+            <label for="name"> Name:</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Your name"
+              style={{ width: "200px" }}
+              required
+            />
+          </div>
+          <br />
+          {/* Input box for message */}
+          <div className="input-box">
+            <label htmlFor="message"> Your message:</label>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Enter message here..."
+              rows="8"
+              style={{ width: "400px" }}
+              required
+            ></textarea>
+          </div>
+          <br />
+          {/* Submit button */}
+          <div className="input-box">
+            <input name="submit" type="submit" value="submit" />
+          </div>
+        </form>
+      </div>
     </main>
   </Layout>
 );

@@ -20,14 +20,15 @@ export default () => (
         color: pink;
         margin-top: 30px;
         text-align: center;
-        margin: 50px;
+        margin-top: 30px;
+        margin-bottom: 10px;
       }
 
       h2 {
+        margin-top: 40px;
         font-size: 20px;
         text-align: center;
         color: pink;
-        margin: 80px;
         font-family: Georgia, "Times New Roman", Times, serif;
       }
 
@@ -35,8 +36,21 @@ export default () => (
         font-size: 18px;
         font-family: Georgia, "Times New Roman", Times, serif;
         color: white;
-        margin: 10px;
         text-align: justify;
+      }
+
+      .p-container {
+        padding: 35px;
+        border-radius: 10px;
+        border: solid 2px grey;
+        margin-top: 30px;
+        margin-left: 150px;
+        margin-right: 150px;
+        margin-bottom: 30px;
+      }
+
+      li {
+        color: white;
       }
     `}</style>
     {/* Heading for the About Me page */}
@@ -55,22 +69,37 @@ export default () => (
       Welcome to my developer portfolio!<br></br>
       I'm passionate about web design and content creations.
     </h2>
-
-    {/* Paragraph with information about the developer */}
-    <p>
-      New in the field of Web Development, with a passion for online businesses,
-      web design, and photography, with the goal to join a team of like-minded
-      developers.
-      <br />
-      <br />
-      I have a background in Pedagogical Sciences. In my professional journey, I
-      have worked in the Montessori Nursery, primary School, and secondary
-      School.
-      <br />
-      <br />I am a professional with experience in Administration, secretarial
-      work, and tutoring, supported by a strong background in the field of
-      education. Being a confident user of business IT tools, data entry, email
-      management.
-    </p>
+    {/* Container for the About Me content */}
+    <div className="p-container">
+      {/* Paragraph with information about the developer */}
+      <ul>
+        <li>
+          <p>
+            New in the field of Web Development, with a passion for online
+            businesses, web design, and photography, with the goal to join a
+            team of like-minded developers.
+          </p>
+        </li>
+        <br />
+        <br />
+        <li>
+          <p>
+            I have a background in Pedagogical Sciences. In my professional
+            journey, I have worked in the Montessori Nursery, primary School,
+            and secondary School.
+          </p>
+        </li>
+        <br />
+        <br />
+        <li>
+          <p>
+            I am a professional with experience in Administration, secretarial
+            work, and tutoring, supported by a strong background in the field of
+            education. Being a confident user of business IT tools, data entry,
+            email management.
+          </p>
+        </li>
+      </ul>
+    </div>
   </Layout>
 );

@@ -40,7 +40,6 @@ export default () => (
       /* List styles */
       ul {
         list-style-type: none;
-        padding: 0;
         margin: 50px;
         color: white;
         text-align: left;
@@ -51,9 +50,22 @@ export default () => (
         font-size: 18px;
         margin-bottom: 8px;
         font-family: "Georgia";
+        padding: 5px;
         color: white;
       }
+
+      /* Box styles */
+      .projects-box {
+        background-color: white;
+        padding: 15px;
+        border-radius: 10px;
+        border: solid 2px grey;
+        margin-top: 40px;
+        margin-left: 150px;
+        margin-right: 150px;
+      }
     `}</style>
+
     {/* Main content for the Projects page */}
     <div className="container">
       {/* Heading for the Projects page */}
@@ -64,16 +76,32 @@ export default () => (
         Check out some of my projects below. Feel free to explore the GitHub
         repositories and deployed versions.
       </p>
-
-      {/* List projects with links to GitHub repositories and deployed versions */}
-      <ul>
-        <li>
-          <strong> Project 1:</strong> Travel-Experience-App{" "}
-        </li>
-        <li>
-          <strong>Project 2:</strong> ITunes-App{" "}
-        </li>
-      </ul>
+      {/* Box containing the project list */}
+      <div className="projects-box">
+        {/* List projects with links to GitHub repositories and deployed versions */}
+        <ul>
+          <li>
+            <strong>Project 1:</strong>{" "}
+            <a
+              href="https://github.com/MonicaC29/TravelBlogApp.git"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Travel Blog App Repository
+            </a>
+          </li>
+          <li>
+            <strong>Project 2:</strong>{" "}
+            <a
+              href="https://github.com/MonicaC29/Hangman.git"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Hangman Repository
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </Layout>
 );
